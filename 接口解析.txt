@@ -1,0 +1,311 @@
+#第一次使用
+发送：
+POST /app_logs HTTP/1.1
+Host: alog.umeng.com
+Content-Type: application/x-www-form-urlencoded
+Connection: keep-alive
+X-Umeng-Sdk: iOS/2.2.1.OpenUDID %E5%8C%BB%E9%99%A2%E9%80%9A/1.2.0 iPhone7,2/9.0 4E834162D159DDF8777C99F37CC1AD83
+Accept: */*
+Content-Encoding: deflate
+Accept-Language: zh-cn
+User-Agent: %E5%8C%BB%E9%99%A2%E9%80%9A/1.2.0 CFNetwork/758.0.2 Darwin/15.0.0
+Accept-Encoding: gzip, deflate
+Content-Length: 533
+
+{"header":{"sdk_version":"2.2.1.OpenUDID","idfa":"2A04EFEE-5A32-4BFF-BB65-79D54C573686","language":"zh-Hans-CN","country":"CN","sv":"1.2.0","app_version":"1.2.0","sdk_type":"iOS","device_id":"ac6a70b9269eff93ece910a02fedd937874dfad2","channel":"App Store","resolution":"1136 x 640","os":"iOS","package_name":"ucmed.platform.yyt","access":"WiFi","carrier":"中国移动","idfv":"BC82F08C-A9C1-4213-9F2F-996105C4DDF1","timezone":"8","os_version":"9.0","device_model":"iPhone7,2","is_jailbroken":"NO","mc":"02:00:00:00:00:00","display_name":"医院通","appkey":"53b5058256240bcc930cd232","is_pirated":"YES"},"body":{"launch":[{"date":"2015-10-13","time":"01:00:50","session_id":"152348F13FC63330D794984D0E213962"}]}}
+
+#个人中心
+发送
+POST /api/exec.htm HTTP/1.1
+Host: nbpt.ucmed.cn
+User-Agent:  1.2.0 (iPhone; iPhone OS 9.0; zh_CN)
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 555
+Accept-Encoding: gzip
+Connection: close
+
+requestData:
+{
+  "app_id" : "zsyy_android",
+  "params" : {
+    "id" : 54,
+    "version_num" : "1.2.0"
+  },
+  "client_version" : "1.2.0",
+  "app_key" : "ZW5sNWVWOWhibVJ5YjJsaw==",
+  "api_Channel" : "3",
+  "client_mobile" : "",
+  "user_type" : "3",
+  "session_id" : "",
+  "api_name" : "api.edition"
+}
+
+返回：
+{"return_code":0,"return_msg":"","return_params":{"content":"","edition":"1.2.0","model":{"edition":"1.2.0","link":"https://itunes.apple.com/cn/app/yi-yuan-tong/id893062228?mt=8","content":"","is_update":"2"},"ret_code":0,"link":"https://itunes.apple.com/cn/app/yi-yuan-tong/id893062228?mt=8","is_update":"2","carousel":{"pictur_count":1,"clist":[{"id":2,"imgurl":"http://zyyyimg.ucmed.cn/nbpt/carousel/1423130238954.png","article_url":"4008481766","title":"","date":"20141101","type":1}]}}}
+
+#登录
+POST /api/exec.htm HTTP/1.1
+Host: nbpt.ucmed.cn
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Cookie: JSESSIONID=F766D3E661C61828A51B0CC0135A711C
+User-Agent:  1.2.0 (iPhone; iPhone OS 9.0; zh_CN)
+Content-Length: 590
+Accept-Encoding: gzip
+Connection: close
+
+requestData:
+{
+  "app_id" : "zsyy_android",
+  "params" : {
+    "login_name" : "keChe",
+    "login_password" : "0019d29ec656"
+  },
+  "client_version" : "1.2.0",
+  "app_key" : "ZW5sNWVWOWhibVJ5YjJsaw==",
+  "api_Channel" : "3",
+  "client_mobile" : "",
+  "user_type" : "3",
+  "session_id" : "",
+  "api_name" : "api.nbpt.user.login"
+}
+
+返回：
+{"return_code":0,"return_params":{"ret_code":0,"ret_info":"","user":{"login_name":"keChe","login_password":"0019d29ec656","id":148129,"address":"2572101","status":"1","idcard":"330205198710293350","treatment_card":"48429984","phone":"18358476884","member_num":"1000000120140923000003","name":"","information":"1","education":"1"},"session_id":"dfe5ea34f8e4069405f4e81bba6ae1d8d2539cd909bf1783d4daa9e44db0d644"}}
+
+
+
+# 打开应用
+发送：
+POST /app_logs HTTP/1.1
+Host: alog.umeng.com
+Content-Type: application/x-www-form-urlencoded
+Connection: keep-alive
+X-Umeng-Sdk: iOS/2.2.1.OpenUDID %E5%8C%BB%E9%99%A2%E9%80%9A/1.2.0 iPhone7,2/9.0 4E834162D159DDF8777C99F37CC1AD83
+Accept: */*
+Content-Encoding: deflate
+Accept-Language: zh-cn
+User-Agent: %E5%8C%BB%E9%99%A2%E9%80%9A/1.2.0 CFNetwork/758.0.2 Darwin/15.0.0
+Accept-Encoding: gzip, deflate
+Content-Length: 600
+
+content:
+{"header":{"sdk_version":"2.2.1.OpenUDID","idfa":"2A04EFEE-5A32-4BFF-BB65-79D54C573686","language":"zh-Hans-CN","country":"CN","sv":"1.2.0","app_version":"1.2.0","sdk_type":"iOS","device_id":"ac6a70b9269eff93ece910a02fedd937874dfad2","channel":"App Store","resolution":"1136 x 640","os":"iOS","package_name":"ucmed.platform.yyt","access":"WiFi","carrier":"中国移动","idfv":"01E36971-07A8-4148-9417-B5DD78F209D7","timezone":"8","os_version":"9.0","device_model":"iPhone7,2","is_jailbroken":"NO","mc":"02:00:00:00:00:00","display_name":"医院通","appkey":"53b5058256240bcc930cd232","is_pirated":"YES"},"body":{"launch":[{"date":"2015-10-12","time":"23:21:13","session_id":"30B940CBB767FBE0AB4658E31B0250AE"}],"terminate":[{"time":"23:20:37","date":"2015-10-12","duration":6,"activities":[["AppointViewController",1194]]}]}}
+
+返回：
+{"success": "ok"}
+
+#获取医院
+发送：
+POST /api/exec.htm HTTP/1.1
+Host: nbpt.ucmed.cn
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Cookie: JSESSIONID=0C12FAF08DADBFA9A7DFC448F790687E
+User-Agent:  1.2.0 (iPhone; iPhone OS 9.0; zh_CN)
+Content-Length: 611
+Accept-Encoding: gzip
+Connection: close
+
+requestData:
+{
+  "app_id" : "zsyy_android",
+  "params" : {
+    "city" : "宁波"
+  },
+  "client_version" : "1.2.0",
+  "app_key" : "ZW5sNWVWOWhibVJ5YjJsaw==",
+  "api_Channel" : "3",
+  "client_mobile" : "",
+  "user_type" : "3",
+  "session_id" : "5050c7060b68d0f895763bff71991946966c827cb13e124c4e83bb7c1e0665ac",
+  "api_name" : "api.zwjk.find.hospital_app_by_city"
+}
+
+返回：
+{"return_code":0,"return_params":{"page_count":1,"list":[{"id":158,"name":"","city":"","hospital_id":3223,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/06/28/1403887183131.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/06/30/1404112158018.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/06/30/1404112157093.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-16681025},{"id":35,"name":"","city":"","hospital_id":699,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383702924259.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383702925298.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383702924840.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-10634496},{"id":34,"name":"","city":"","hospital_id":698,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383702808064.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383702830371.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383702808637.jpg","main_content":"","app_size":"1.7M","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-13916681},{"id":157,"name":"","city":"","hospital_id":3221,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405049443731.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/06/30/1404111752666.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/06/30/1404111752655.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-16681025},{"id":33,"name":"","city":"","hospital_id":697,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405049497404.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383702230582.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383702230078.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-16757544},{"id":156,"name":"","city":"","hospital_id":3222,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/10/31/1414744778535.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/10/16/1413448626555.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/10/16/1413448760438.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-16681025},{"id":32,"name":"","city":"","hospital_id":694,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405057517680.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383702100902.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383702100474.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-15631790},{"id":94,"name":"","city":"","hospital_id":3209,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405056985381.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950924005.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950923821.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-12542089},{"id":31,"name":"113","city":"","hospital_id":693,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405055923635.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701836598.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701836448.jpg","main_content":"113","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-10963631},{"id":93,"name":"","city":"","hospital_id":3207,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405060557761.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950679045.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950678894.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-16740996},{"id":30,"name":"","city":"","hospital_id":692,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405051113971.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701774139.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701773978.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-14708786},{"id":92,"name":"","city":"","hospital_id":3206,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405050443459.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950636133.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950635988.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-2284682},{"id":29,"name":"","city":"","hospital_id":691,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405058550032.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701623545.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701623388.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-16753747},{"id":91,"name":"","city":"","hospital_id":3205,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950597122.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950597427.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950597274.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-13653580},{"id":28,"name":"","city":"","hospital_id":690,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405057748640.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701561049.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701560892.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-16613949},{"id":89,"name":"()","city":"","hospital_id":3203,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405058817064.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950505563.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950505438.jpg","main_content":"()","app_size":"","function_introduce":0,"function_register":1,"function_report":1,"function_location":0,"function_doctor":0,"function_store":0,"app_theme":-16681025},{"id":27,"name":"","city":"","hospital_id":689,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405057261689.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701485391.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701485232.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-13582110},{"id":88,"name":"","city":"","hospital_id":3202,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405057050581.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950457646.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950457502.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-10189931},{"id":167,"name":"","city":"","hospital_id":3245,"level":"","logo":"http://api.ucmed.cnnull","main_logo":"http://api.ucmed.cn","app_logo":"http://api.ucmed.cnnull","main_content":"","app_size":"","function_introduce":0,"function_register":1,"function_report":1,"function_location":0,"function_doctor":0,"function_store":0,"app_theme":-16681025},{"id":87,"name":"","city":"","hospital_id":3201,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950418564.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950418877.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950418720.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-5891804},{"id":26,"name":"","city":"","hospital_id":687,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405059967487.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701391025.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701390870.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-12937710},{"id":166,"name":"","city":"","hospital_id":3244,"level":"","logo":"http://api.ucmed.cnnull","main_logo":"http://api.ucmed.cn","app_logo":"http://api.ucmed.cnnull","main_content":"","app_size":"","function_introduce":0,"function_register":1,"function_report":1,"function_location":0,"function_doctor":0,"function_store":0,"app_theme":-1},{"id":86,"name":"","city":"","hospital_id":3200,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405057310584.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950360749.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950360592.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-16599058},{"id":25,"name":"","city":"","hospital_id":686,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405060273047.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701285060.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701284875.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-14839169},{"id":165,"name":"","city":"","hospital_id":3243,"level":"","logo":"http://api.ucmed.cnnull","main_logo":"http://api.ucmed.cn","app_logo":"http://api.ucmed.cnnull","main_content":"","app_size":"","function_introduce":0,"function_register":1,"function_report":1,"function_location":0,"function_doctor":0,"function_store":0,"app_theme":-1},{"id":85,"name":"","city":"","hospital_id":3199,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950378625.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950378926.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950378776.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-11955749},{"id":9,"name":"","city":"","hospital_id":688,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405057890054.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/04/25/1366882549868.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/04/25/1366882549728.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-10311221},{"id":164,"name":"","city":"","hospital_id":3242,"level":"","logo":"http://api.ucmed.cnnull","main_logo":"http://api.ucmed.cn","app_logo":"http://api.ucmed.cnnull","main_content":"","app_size":"","function_introduce":0,"function_register":1,"function_report":1,"function_location":0,"function_doctor":0,"function_store":0,"app_theme":-1},{"id":84,"name":"","city":"","hospital_id":3198,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405050767527.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950275139.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/01/17/1389950274986.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-14730102},{"id":163,"name":"","city":"","hospital_id":3241,"level":"","logo":"http://api.ucmed.cnnull","main_logo":"http://api.ucmed.cn","app_logo":"http://api.ucmed.cnnull","main_content":"","app_size":"","function_introduce":0,"function_register":1,"function_report":1,"function_location":0,"function_doctor":0,"function_store":0,"app_theme":-1},{"id":44,"name":"","city":"","hospital_id":3026,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405060414219.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383703527275.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383703527124.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":0,"function_doctor":0,"function_store":1,"app_theme":-13450270},{"id":160,"name":"","city":"","hospital_id":3224,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405060480557.jpg","main_logo":"http://api.ucmed.cn","app_logo":"http://api.ucmed.cnnull","main_content":"","app_size":"","function_introduce":0,"function_register":1,"function_report":1,"function_location":0,"function_doctor":0,"function_store":1,"app_theme":-1},{"id":42,"name":"","city":"","hospital_id":2544,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405060695574.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383703403043.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383703402894.jpg","main_content":"","app_size":"1.6M","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-11427109},{"id":159,"name":"","city":"","hospital_id":3220,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/06/28/1403887634050.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/06/30/1404111686216.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/06/30/1404111686023.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-16681025},{"id":36,"name":"","city":"","hospital_id":701,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405059200869.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383703002229.jpg","app_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383703002080.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"app_theme":-13269318}]}}
+
+#选择医院
+发送：
+POST /api/exec.htm HTTP/1.1
+Host: nbpt.ucmed.cn
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Cookie: JSESSIONID=0C12FAF08DADBFA9A7DFC448F790687E
+User-Agent:  1.2.0 (iPhone; iPhone OS 9.0; zh_CN)
+Content-Length: 587
+Accept-Encoding: gzip
+Connection: close
+
+requestData:
+{
+  "app_id" : "zsyy_android",
+  "params" : {
+    "id" : 686
+  },
+  "client_version" : "1.2.0",
+  "app_key" : "ZW5sNWVWOWhibVJ5YjJsaw==",
+  "api_Channel" : "3",
+  "client_mobile" : "",
+  "user_type" : "3",
+  "session_id" : "5050c7060b68d0f895763bff71991946966c827cb13e124c4e83bb7c1e0665ac",
+  "api_name" : "api.zwjk.find.hospital_app_detail"
+}
+
+返回：
+{"return_code":0,"return_params":{"hospitalApp":{"id":25,"name":"","city":"","hospital_id":686,"level":"","logo":"http://api.ucmed.cn/images/upload/hospitalApp/2014/07/11/1405060273047.jpg","main_logo":"http://api.ucmed.cn/images/upload/hospitalApp/2013/11/06/1383701285060.jpg","app_logo":"/images/upload/hospitalApp/2013/11/06/1383701284875.jpg","main_content":"","app_size":"","function_introduce":1,"function_register":1,"function_report":1,"function_location":1,"function_doctor":1,"function_store":1,"latitude":29.897013,"longitude":121.524605,"app_theme":-14839169,"app_theme_ios":[29,146,127]}}}
+
+# 预约挂号
+发送：
+POST /api/exec.htm HTTP/1.1
+Host: nbpt.ucmed.cn
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Cookie: JSESSIONID=0C12FAF08DADBFA9A7DFC448F790687E
+User-Agent:  1.2.0 (iPhone; iPhone OS 9.0; zh_CN)
+Content-Length: 798
+Accept-Encoding: gzip
+Connection: close
+
+requestData:
+{
+  "app_id" : "zsyy_android",
+  "params" : {
+    "page_size" : "1000",
+    "hospital_name" : "宁波市中医院",
+    "hospital_id" : "686",
+    "page_no" : "1"
+  },
+  "client_version" : "1.2.0",
+  "app_key" : "ZW5sNWVWOWhibVJ5YjJsaw==",
+  "api_Channel" : "3",
+  "client_mobile" : "",
+  "user_type" : "3",
+  "session_id" : "5050c7060b68d0f895763bff71991946966c827cb13e124c4e83bb7c1e0665ac",
+  "api_name" : "api.nbpt.department.list"
+}
+
+返回：
+{"return_code":0,"return_params":{"ret_code":0,"ret_info":"","page_count":1,"total_count":72,"list":[{"department_id":"41952988-179","department_name":""},{"department_id":"41952988-127","department_name":""},{"department_id":"41952988-03","department_name":""},{"department_id":"41952988-502","department_name":""},{"department_id":"41952988-02","department_name":""},{"department_id":"41952988-544","department_name":""},{"department_id":"41952988-503","department_name":""},{"department_id":"41952988-553","department_name":""},{"department_id":"41952988-118","department_name":""},{"department_id":"41952988-117","department_name":""},{"department_id":"41952988-114","department_name":""},{"department_id":"41952988-134","department_name":""},{"department_id":"41952988-132","department_name":""},{"department_id":"41952988-115","department_name":""},{"department_id":"41952988-116","department_name":""},{"department_id":"41952988-108","department_name":""},{"department_id":"41952988-109","department_name":""},{"department_id":"41952988-111","department_name":""},{"department_id":"41952988-112","department_name":""},{"department_id":"41952988-97","department_name":""},{"department_id":"41952988-124","department_name":""},{"department_id":"41952988-125","department_name":""},{"department_id":"41952988-184","department_name":""},{"department_id":"41952988-122","department_name":""},{"department_id":"41952988-121","department_name":""},{"department_id":"41952988-169","department_name":""},{"department_id":"41952988-05","department_name":""},{"department_id":"41952988-06","department_name":""},{"department_id":"41952988-04","department_name":""},{"department_id":"41952988-304","department_name":""},{"department_id":"41952988-101","department_name":""},{"department_id":"41952988-11","department_name":""},{"department_id":"41952988-181","department_name":""},{"department_id":"41952988-10","department_name":""},{"department_id":"41952988-102","department_name":""},{"department_id":"41952988-12","department_name":""},{"department_id":"41952988-558","department_name":""},{"department_id":"41952988-86","department_name":""},{"department_id":"41952988-78","department_name":""},{"department_id":"41952988-29","department_name":""},{"department_id":"41952988-28","department_name":""},{"department_id":"41952988-555","department_name":""},{"department_id":"41952988-15","department_name":""},{"department_id":"41952988-556","department_name":""},{"department_id":"41952988-14","department_name":""},{"department_id":"41952988-13","department_name":""},{"department_id":"41952988-57","department_name":""},{"department_id":"41952988-92","department_name":""},{"department_id":"41952988-33","department_name":""},{"department_id":"41952988-32","department_name":""},{"department_id":"41952988-91","department_name":""},{"department_id":"41952988-38","department_name":""},{"department_id":"41952988-901","department_name":""},{"department_id":"41952988-26","department_name":""},{"department_id":"41952988-27","department_name":""},{"department_id":"41952988-25","department_name":""},{"department_id":"41952988-69","department_name":""},{"department_id":"41952988-409","department_name":""},{"department_id":"41952988-303","department_name":""},{"department_id":"41952988-408","department_name":""},{"department_id":"41952988-08","department_name":""},{"department_id":"41952988-09","department_name":""},{"department_id":"41952988-07","department_name":"()"},{"department_id":"41952988-508","department_name":""},{"department_id":"41952988-60","department_name":""},{"department_id":"41952988-62","department_name":""},{"department_id":"41952988-557","department_name":""},{"department_id":"41952988-17","department_name":""},{"department_id":"41952988-188","department_name":""},{"department_id":"41952988-16","department_name":""},{"department_id":"41952988-18","department_name":""},{"department_id":"41952988-21","department_name":""}]}}
+
+
+#选择科室
+POST /api/exec.htm HTTP/1.1
+Host: nbpt.ucmed.cn
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Cookie: JSESSIONID=0C12FAF08DADBFA9A7DFC448F790687E
+User-Agent:  1.2.0 (iPhone; iPhone OS 9.0; zh_CN)
+Content-Length: 752
+Accept-Encoding: gzip
+Connection: close
+
+requestData:
+{
+  "app_id" : "zsyy_android",
+  "params" : {
+    "page_size" : "1000",
+    "hospital_id" : "686",
+    "department_id" : "41952988-127",
+    "page_no" : "1"
+  },
+  "client_version" : "1.2.0",
+  "app_key" : "ZW5sNWVWOWhibVJ5YjJsaw==",
+  "api_Channel" : "3",
+  "client_mobile" : "",
+  "user_type" : "3",
+  "session_id" : "5050c7060b68d0f895763bff71991946966c827cb13e124c4e83bb7c1e0665ac",
+  "api_name" : "api.nbpt.doctor.list"
+}
+
+返回：
+{"return_code":0,"return_params":{"ret_code":0,"ret_info":"","page_count":1,"total_count":1,"list":[{"department_name":"","doctor_id":"419529882501","doctor_name":"","doctor_photo":"http://wsgh.nbws.gov.cn/PhotoShow/419529882501/S.shtml"}]}}
+
+#选择医生
+发送：
+POST /api/exec.htm HTTP/1.1
+Host: nbpt.ucmed.cn
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Cookie: JSESSIONID=0C12FAF08DADBFA9A7DFC448F790687E
+User-Agent:  1.2.0 (iPhone; iPhone OS 9.0; zh_CN)
+Content-Length: 814
+Accept-Encoding: gzip
+Connection: close
+
+requestData:
+{
+  "app_id" : "zsyy_android",
+  "params" : {
+    "page_size" : "1000",
+    "doctor_id" : "419529882501",
+    "hospital_id" : "686",
+    "department_id" : "41952988-127",
+    "page_no" : "1"
+  },
+  "client_version" : "1.2.0",
+  "app_key" : "ZW5sNWVWOWhibVJ5YjJsaw==",
+  "api_Channel" : "3",
+  "client_mobile" : "",
+  "user_type" : "3",
+  "session_id" : "5050c7060b68d0f895763bff71991946966c827cb13e124c4e83bb7c1e0665ac",
+  "api_name" : "api.nbpt.doctor.detail"
+}
+
+返回：
+{"return_code":0,"return_params":{"ret_code":0,"ret_info":"","hospital_id":"41952988","hospital_name":"","department_id":"127","department_name":"","doctor_id":"419529882501","doctor_name":"","doctor_sex":"F","doctor_birthday":"1972-02-25","doctor_title":"","doctor_introduction":"    \n10\n","doctor_photo":"http://wsgh.nbws.gov.cn/PhotoShow/419529882501/S.shtml","time":1444664892316,"list":[{"schedule_num":"41952988151013809182","schedule_date":"2015-10-13","out_time":"","reg_fee":"0","clinic_fee":"21","schedule_begtime":"2015-10-13 6:45:00","schedule_endtime":"2015-10-13 11:30:00","rated_num":"40","last_num":"0","stop_treat_flag":"N","week":"","ghyzbz":"N"},{"schedule_num":"41952988151013809411","schedule_date":"2015-10-13","out_time":"","reg_fee":"0","clinic_fee":"21","schedule_begtime":"2015-10-13 12:15:00","schedule_endtime":"2015-10-13 17:00:00","rated_num":"40","last_num":"1","stop_treat_flag":"N","week":"","ghyzbz":"N"},{"schedule_num":"41952988151016809183","schedule_date":"2015-10-16","out_time":"","reg_fee":"0","clinic_fee":"21","schedule_begtime":"2015-10-16 6:45:00","schedule_endtime":"2015-10-16 11:30:00","rated_num":"25","last_num":"0","stop_treat_flag":"N","week":"","ghyzbz":"N"},{"schedule_num":"41952988151020824002","schedule_date":"2015-10-20","out_time":"","reg_fee":"0","clinic_fee":"21","schedule_begtime":"2015-10-20 6:45:00","schedule_endtime":"2015-10-20 11:30:00","rated_num":"40","last_num":"26","stop_treat_flag":"N","week":"","ghyzbz":"N"},{"schedule_num":"41952988151020824196","schedule_date":"2015-10-20","out_time":"","reg_fee":"0","clinic_fee":"21","schedule_begtime":"2015-10-20 12:15:00","schedule_endtime":"2015-10-20 17:00:00","rated_num":"40","last_num":"38","stop_treat_flag":"N","week":"","ghyzbz":"N"}]}}
+
+#预约
+发送：
+POST /api/exec.htm HTTP/1.1
+Host: nbpt.ucmed.cn
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Cookie: JSESSIONID=0C12FAF08DADBFA9A7DFC448F790687E
+User-Agent:  1.2.0 (iPhone; iPhone OS 9.0; zh_CN)
+Content-Length: 619
+Accept-Encoding: gzip
+Connection: close
+
+requestData:
+{
+  "app_id" : "zsyy_android",
+  "params" : {
+    "schedule_num" : "41952988151013809411"
+  },
+  "client_version" : "1.2.0",
+  "app_key" : "ZW5sNWVWOWhibVJ5YjJsaw==",
+  "api_Channel" : "3",
+  "client_mobile" : "",
+  "user_type" : "3",
+  "session_id" : "5050c7060b68d0f895763bff71991946966c827cb13e124c4e83bb7c1e0665ac",
+  "api_name" : "api.nbpt.reservation.period.list"
+}
+
+返回：
+{"return_code":0,"return_params":{"ret_code":0,"ret_info":"","list":[{"yysjd":"2015-10-13 13:30","yysjd_num":"1"},{"yysjd":"2015-10-13 13:33","yysjd_num":"2"},{"yysjd":"2015-10-13 13:36","yysjd_num":"3"},{"yysjd":"2015-10-13 13:39","yysjd_num":"4"},{"yysjd":"2015-10-13 13:42","yysjd_num":"5"},{"yysjd":"2015-10-13 13:45","yysjd_num":"6"},{"yysjd":"2015-10-13 13:48","yysjd_num":"7"},{"yysjd":"2015-10-13 13:51","yysjd_num":"8"},{"yysjd":"2015-10-13 13:54","yysjd_num":"9"},{"yysjd":"2015-10-13 13:57","yysjd_num":"10"},{"yysjd":"2015-10-13 14:00","yysjd_num":"11"},{"yysjd":"2015-10-13 14:03","yysjd_num":"12"},{"yysjd":"2015-10-13 14:06","yysjd_num":"13"},{"yysjd":"2015-10-13 14:09","yysjd_num":"14"},{"yysjd":"2015-10-13 14:12","yysjd_num":"15"},{"yysjd":"2015-10-13 14:15","yysjd_num":"16"},{"yysjd":"2015-10-13 14:18","yysjd_num":"17"},{"yysjd":"2015-10-13 14:21","yysjd_num":"18"},{"yysjd":"2015-10-13 14:24","yysjd_num":"19"},{"yysjd":"2015-10-13 14:27","yysjd_num":"20"},{"yysjd":"2015-10-13 14:30","yysjd_num":"21"},{"yysjd":"2015-10-13 14:33","yysjd_num":"22"},{"yysjd":"2015-10-13 14:36","yysjd_num":"23"},{"yysjd":"2015-10-13 14:39","yysjd_num":"24"},{"yysjd":"2015-10-13 14:42","yysjd_num":"25"},{"yysjd":"2015-10-13 14:45","yysjd_num":"26"},{"yysjd":"2015-10-13 14:48","yysjd_num":"27"},{"yysjd":"2015-10-13 14:51","yysjd_num":"28"},{"yysjd":"2015-10-13 14:54","yysjd_num":"29"},{"yysjd":"2015-10-13 14:57","yysjd_num":"30"},{"yysjd":"2015-10-13 15:00","yysjd_num":"31"},{"yysjd":"2015-10-13 15:03","yysjd_num":"32"},{"yysjd":"2015-10-13 15:06","yysjd_num":"33"},{"yysjd":"2015-10-13 15:09","yysjd_num":"34"},{"yysjd":"2015-10-13 15:12","yysjd_num":"35"},{"yysjd":"2015-10-13 15:15","yysjd_num":"36"},{"yysjd":"2015-10-13 15:18","yysjd_num":"37"},{"yysjd":"2015-10-13 15:21","yysjd_num":"38"},{"yysjd":"2015-10-13 15:24","yysjd_num":"39"},{"yysjd":"2015-10-13 15:27","yysjd_num":"40"}]}}
+
+#预约确认
+发送：
+POST /api/exec.htm HTTP/1.1
+Host: nbpt.ucmed.cn
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Cookie: JSESSIONID=0C12FAF08DADBFA9A7DFC448F790687E
+User-Agent:  1.2.0 (iPhone; iPhone OS 9.0; zh_CN)
+Content-Length: 789
+Accept-Encoding: gzip
+Connection: close
+
+requestData:
+{
+  "app_id" : "zsyy_android",
+  "params" : {
+    "schedule_date" : "2015-10-13",
+    "yysjd" : "2015-10-13 13:30",
+    "schedule_num" : "41952988151013809411",
+    "yysjd_num" : "1"
+  },
+  "client_version" : "1.2.0",
+  "app_key" : "ZW5sNWVWOWhibVJ5YjJsaw==",
+  "api_Channel" : "3",
+  "client_mobile" : "",
+  "user_type" : "3",
+  "session_id" : "5050c7060b68d0f895763bff71991946966c827cb13e124c4e83bb7c1e0665ac",
+  "api_name" : "api.nbpt.reservation.submit"
+}
+
+返回：
+错误 {"return_code":0,"return_params":{"ret_code":1004,"ret_info":""}}

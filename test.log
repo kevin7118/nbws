@@ -1,0 +1,22 @@
+an error raise
+2015-10-13 22:05:19,903 - tmp2.py:9 - ERROR - an error raise
+2015-10-13 22:16:12,686 - nbws.py:67 - DEBUG - session_id:e7a3f2988febdd3987cbb6e2b5fe9a8a97e2d6f1198f17c73a1cc40cf2c48c35
+2015-10-13 22:28:15,696 - tmp2.py:9 - ERROR - an error raise
+2015-10-13 22:28:53,490 - tmp2.py:9 - ERROR - an error raise
+2015-10-13 22:29:06,888 - tmp2.py:9 - ERROR - an error raise
+2015-10-13 22:29:17,946 - tmp2.py:9 - ERROR - an error raise
+2015-10-13 22:29:30,042 - tmp2.py:9 - ERROR - an error raise
+2015-10-13 22:32:11,464 - tmp2.py:9 - ERROR - an error raise
+2015-10-13 22:32:25,898 - tmp2.py:9 - ERROR - an error raise
+2015-10-13 23:11:41,433 - nbws.py:67 - ERROR - Reason Code: [Errno 11004] getaddrinfo failed 网络不可达
+2015-10-13 23:27:14,937 - nbws.py:66 - DEBUG - session_id:7b173c18487873c6ca561ab982fcec439e058abbe67ce7eae98c5af03b009459
+2015-10-13 23:32:28,582 - nbws.py:74 - DEBUG - session_id:0a8bc24618d04b48a603a1287bc1cd495b3b5f98c7a7ecadd221b81f31e6896a
+2015-10-13 23:33:28,276 - nbws.py:76 - DEBUG - 登录失败
+2015-10-13 23:33:48,296 - nbws.py:76 - DEBUG - 登录失败
+2015-10-13 23:46:27,881 - nbws.py:76 - DEBUG - session_id:91d46849cc35c96d8bc1d59ce3a6b89e244dd596929635707f38550110ad62dd
+2015-10-13 23:47:48,605 - nbws.py:76 - DEBUG - session_id:a216276d812ca9d6c8bb96d74b1bc9f23f154e474b7d72f8d4860dd9e0e1b3e4
+2015-10-13 23:47:48,855 - nbws.py:123 - DEBUG - 登录失败
+2015-10-13 23:58:42,125 - nbws.py:78 - DEBUG - session_id:da692c4d64a5d276200a3db263ac9075923403a3277feaf6bd20086529cd549e
+2015-10-13 23:58:42,364 - nbws.py:124 - DEBUG - 医院名称:宁波市中医院, 医院编号:686
+2015-10-14 00:23:07,069 - nbws.py:78 - DEBUG - session_id:b4f357ceb047e4086bc14bece9b1dd6dc1827fa37e55a07707aee8e7a3ec3757
+2015-10-14 00:23:07,400 - nbws.py:124 - DEBUG - 医院名称:宁波市中医院, 医院编号:686
