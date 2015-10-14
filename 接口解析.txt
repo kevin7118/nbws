@@ -278,6 +278,24 @@ requestData:
 返回：
 {"return_code":0,"return_params":{"ret_code":0,"ret_info":"","list":[{"yysjd":"2015-10-13 13:30","yysjd_num":"1"},{"yysjd":"2015-10-13 13:33","yysjd_num":"2"},{"yysjd":"2015-10-13 13:36","yysjd_num":"3"},{"yysjd":"2015-10-13 13:39","yysjd_num":"4"},{"yysjd":"2015-10-13 13:42","yysjd_num":"5"},{"yysjd":"2015-10-13 13:45","yysjd_num":"6"},{"yysjd":"2015-10-13 13:48","yysjd_num":"7"},{"yysjd":"2015-10-13 13:51","yysjd_num":"8"},{"yysjd":"2015-10-13 13:54","yysjd_num":"9"},{"yysjd":"2015-10-13 13:57","yysjd_num":"10"},{"yysjd":"2015-10-13 14:00","yysjd_num":"11"},{"yysjd":"2015-10-13 14:03","yysjd_num":"12"},{"yysjd":"2015-10-13 14:06","yysjd_num":"13"},{"yysjd":"2015-10-13 14:09","yysjd_num":"14"},{"yysjd":"2015-10-13 14:12","yysjd_num":"15"},{"yysjd":"2015-10-13 14:15","yysjd_num":"16"},{"yysjd":"2015-10-13 14:18","yysjd_num":"17"},{"yysjd":"2015-10-13 14:21","yysjd_num":"18"},{"yysjd":"2015-10-13 14:24","yysjd_num":"19"},{"yysjd":"2015-10-13 14:27","yysjd_num":"20"},{"yysjd":"2015-10-13 14:30","yysjd_num":"21"},{"yysjd":"2015-10-13 14:33","yysjd_num":"22"},{"yysjd":"2015-10-13 14:36","yysjd_num":"23"},{"yysjd":"2015-10-13 14:39","yysjd_num":"24"},{"yysjd":"2015-10-13 14:42","yysjd_num":"25"},{"yysjd":"2015-10-13 14:45","yysjd_num":"26"},{"yysjd":"2015-10-13 14:48","yysjd_num":"27"},{"yysjd":"2015-10-13 14:51","yysjd_num":"28"},{"yysjd":"2015-10-13 14:54","yysjd_num":"29"},{"yysjd":"2015-10-13 14:57","yysjd_num":"30"},{"yysjd":"2015-10-13 15:00","yysjd_num":"31"},{"yysjd":"2015-10-13 15:03","yysjd_num":"32"},{"yysjd":"2015-10-13 15:06","yysjd_num":"33"},{"yysjd":"2015-10-13 15:09","yysjd_num":"34"},{"yysjd":"2015-10-13 15:12","yysjd_num":"35"},{"yysjd":"2015-10-13 15:15","yysjd_num":"36"},{"yysjd":"2015-10-13 15:18","yysjd_num":"37"},{"yysjd":"2015-10-13 15:21","yysjd_num":"38"},{"yysjd":"2015-10-13 15:24","yysjd_num":"39"},{"yysjd":"2015-10-13 15:27","yysjd_num":"40"}]}}
 
+或者无挂号信息
+发送：
+{
+  "app_id" : "zsyy_android",
+  "params" : {
+    "schedule_num" : "41952988151020824809"
+  },
+  "client_version" : "1.2.0",
+  "app_key" : "ZW5sNWVWOWhibVJ5YjJsaw==",
+  "api_Channel" : "3",
+  "client_mobile" : "",
+  "user_type" : "3",
+  "session_id" : "692249a19999094a61c8090ce53b8b0e8071c155eb7ba3f0451f49f392471740",
+  "api_name" : "api.nbpt.reservation.period.list"
+}
+返回：
+{"return_code":0,"return_params":{"ret_code":1003,"ret_info":"该排班不存在预约时间段！"}}
+
 #预约确认
 发送：
 POST /api/exec.htm HTTP/1.1
@@ -309,3 +327,24 @@ requestData:
 
 返回：
 错误 {"return_code":0,"return_params":{"ret_code":1004,"ret_info":""}}
+
+或者
+requestData = 
+{
+  "app_id" : "zsyy_android",
+  "params" : {
+    "schedule_date" : "2015-10-20",
+    "yysjd" : "",
+    "schedule_num" : "41952988151020824809",
+    "yysjd_num" : ""
+  },
+  "client_version" : "1.2.0",
+  "app_key" : "ZW5sNWVWOWhibVJ5YjJsaw==",
+  "api_Channel" : "3",
+  "client_mobile" : "",
+  "user_type" : "3",
+  "session_id" : "692249a19999094a61c8090ce53b8b0e8071c155eb7ba3f0451f49f392471740",
+  "api_name" : "api.nbpt.reservation.submit"
+}
+
+{"return_code":0,"return_params":{"ret_code":0,"ret_info":"","schedule_ghxh":"4","reg_num":"3"}}
